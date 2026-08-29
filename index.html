@@ -376,11 +376,11 @@ a{color:inherit;text-decoration:none;}
   background:var(--charcoal);
 }
 .imgpage .bg-media{
-  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;z-index:0;
 }
 .imgpage .bg-scrim{
   position:absolute;inset:0;z-index:1;
-  background:linear-gradient(180deg, rgba(20,16,8,0.12) 0%, rgba(20,16,8,0.05) 35%, rgba(20,16,8,0.55) 100%);
+  background:linear-gradient(180deg, rgba(46,42,34,0.34) 0%, rgba(46,42,34,0.2) 28%, rgba(46,42,34,0.32) 55%, rgba(35,30,21,0.72) 100%);
 }
 .imgpage .content{
   position:relative;z-index:6;
@@ -389,9 +389,16 @@ a{color:inherit;text-decoration:none;}
   flex:1;
 }
 
+/* Shared Tuscan-terrace theme for every section below the hero (except Our Story) */
+.theme-tuscan .bg-media{ object-position:center 38%; }
+
 /* ============================================================
    03 OUR STORY
    ============================================================ */
+#story .bg-media{ object-position:center 22%; filter:blur(3px) saturate(0.96); transform:scale(1.06); }
+#story .bg-scrim{
+  background:linear-gradient(180deg, rgba(250,245,233,0.1) 0%, rgba(46,42,34,0.14) 30%, rgba(46,42,34,0.28) 55%, rgba(30,26,18,0.86) 100%);
+}
 #story .content{justify-content:flex-end;padding-bottom:90px;}
 #story .story-head{text-align:center;color:var(--ivory);}
 #story .story-head .eyebrow{color:var(--gold-soft);}
@@ -423,6 +430,10 @@ a{color:inherit;text-decoration:none;}
 /* ============================================================
    04 THE COUPLE
    ============================================================ */
+#couple .bg-media{ object-position:center 30%; }
+#couple .bg-scrim{
+  background:linear-gradient(180deg, rgba(46,42,34,0.36) 0%, rgba(46,42,34,0.2) 26%, rgba(46,42,34,0.32) 55%, rgba(30,26,18,0.76) 100%);
+}
 #couple .content{
   padding-top:70px;
   padding-bottom:60px;
@@ -485,8 +496,9 @@ a{color:inherit;text-decoration:none;}
 /* ============================================================
    05 SAVE THE DATE
    ============================================================ */
+#savedate .bg-media{ object-position:center 55%; }
 #savedate .bg-scrim{
-  background:linear-gradient(180deg, rgba(20,16,8,0.38) 0%, rgba(20,16,8,0.12) 32%, rgba(20,16,8,0.6) 100%);
+  background:radial-gradient(ellipse 120% 70% at 50% 45%, rgba(46,42,34,0.62) 0%, rgba(46,42,34,0.42) 45%, rgba(35,30,21,0.3) 100%);
 }
 #savedate .content{
   align-items:center;justify-content:center;text-align:center;color:var(--ivory);
@@ -520,20 +532,23 @@ a{color:inherit;text-decoration:none;}
 /* ============================================================
    06 WEDDING DETAILS
    ============================================================ */
-#details{background:var(--ivory);}
+#details .bg-media{ object-position:center 30%; }
+#details .bg-scrim{
+  background:linear-gradient(180deg, rgba(46,42,34,0.5) 0%, rgba(46,42,34,0.34) 30%, rgba(46,42,34,0.42) 55%, rgba(30,26,18,0.78) 100%);
+}
 #details .content{
-  position:relative;z-index:2;
+  position:relative;z-index:6;
   padding:90px 28px 80px;
-  color:var(--charcoal);
+  color:var(--ivory);
   align-items:center;
   justify-content:center;
   flex:1;
   gap:6px;
 }
 #details .details-head{text-align:center;margin-bottom:8px;}
-#details .details-head .eyebrow{color:var(--gold-deep);}
+#details .details-head .eyebrow{color:var(--gold-soft);}
 #details .details-head h2{
-  font-family:var(--font-display);font-style:italic;font-size:26px;margin:8px 0 0;
+  font-family:var(--font-display);font-style:italic;font-size:26px;margin:8px 0 0;color:var(--ivory);
 }
 .detail-block{
   width:100%;
@@ -543,34 +558,37 @@ a{color:inherit;text-decoration:none;}
   position:relative;
 }
 .detail-block + .detail-block{
-  border-top:1px solid rgba(143,110,52,0.25);
+  border-top:1px solid rgba(198,161,91,0.3);
 }
 .detail-block .dblabel{
   font-family:var(--font-label);
   font-size:10px;
   letter-spacing:0.3em;
   text-transform:uppercase;
-  color:var(--sage-deep);
+  color:var(--gold-soft);
   margin-bottom:10px;
+  text-shadow:0 1px 6px rgba(0,0,0,0.5);
 }
 .detail-block .dtime{
   font-family:var(--font-display);
   font-style:italic;
   font-size:30px;
-  color:var(--gold-deep);
+  color:var(--ivory);
   margin-bottom:10px;
+  text-shadow:0 2px 12px rgba(0,0,0,0.4);
 }
 .detail-block .dplace{
   font-family:var(--font-body);
   font-size:17px;
   line-height:1.5;
-  color:var(--charcoal-soft);
+  color:var(--champagne);
+  text-shadow:0 1px 8px rgba(0,0,0,0.4);
 }
 .detail-block .dplace strong{
   display:block;
   font-weight:600;
   font-size:18px;
-  color:var(--charcoal);
+  color:var(--ivory);
   margin-bottom:2px;
 }
 .ornament-gold{
@@ -582,6 +600,10 @@ a{color:inherit;text-decoration:none;}
 /* ============================================================
    07 VENUES
    ============================================================ */
+#venues .bg-media{ object-position:center 32%; }
+#venues .bg-scrim{
+  background:linear-gradient(180deg, rgba(46,42,34,0.42) 0%, rgba(46,42,34,0.24) 25%, rgba(46,42,34,0.34) 55%, rgba(30,26,18,0.74) 100%);
+}
 #venues .content{padding-top:88px;padding-bottom:70px;gap:20px;flex:1;justify-content:flex-start;}
 #venues .venues-head{text-align:center;color:var(--ivory);margin-bottom:6px;}
 #venues .venues-head h2{
@@ -738,6 +760,10 @@ a{color:inherit;text-decoration:none;}
 /* ============================================================
    09 COUNTDOWN
    ============================================================ */
+#countdown .bg-media{ object-position:center 60%; }
+#countdown .bg-scrim{
+  background:radial-gradient(ellipse 120% 65% at 50% 50%, rgba(46,42,34,0.58) 0%, rgba(46,42,34,0.4) 45%, rgba(35,30,21,0.34) 100%);
+}
 #countdown .content{
   align-items:center;justify-content:center;text-align:center;color:var(--ivory);
 }
@@ -770,6 +796,10 @@ a{color:inherit;text-decoration:none;}
    11 THANK YOU / FOOTER
    ============================================================ */
 #thankyou{min-height:100svh;}
+#thankyou .bg-media{ object-position:center 46%; }
+#thankyou .bg-scrim{
+  background:linear-gradient(180deg, rgba(46,42,34,0.42) 0%, rgba(46,42,34,0.28) 30%, rgba(35,30,21,0.8) 100%);
+}
 #thankyou .content{
   align-items:center;justify-content:center;text-align:center;color:var(--ivory);
   padding-bottom:56px;
@@ -816,37 +846,23 @@ a{color:inherit;text-decoration:none;}
    ============================================================ */
 #musicToggle{
   position:fixed;
-  bottom:22px;right:22px;
-  width:50px;height:50px;
+  bottom:20px;right:20px;
+  width:42px;height:42px;
   border-radius:50%;
-  background:rgba(20,17,10,0.55);
+  background:rgba(20,17,10,0.5);
   backdrop-filter:blur(6px);
-  border:1px solid rgba(198,161,91,0.6);
+  border:1px solid rgba(198,161,91,0.55);
   display:flex;align-items:center;justify-content:center;
   z-index:999;
   opacity:0;
   pointer-events:none;
-  transition:opacity .6s ease;
+  transition:opacity .6s ease, border-color .3s ease;
 }
 #musicToggle.show{opacity:1;pointer-events:auto;}
-#musicToggle svg{width:20px;height:20px;fill:var(--gold-soft);}
-#musicToggle .disc{
-  width:20px;height:20px;
-  border-radius:50%;
-  border:2px solid var(--gold-soft);
-  position:relative;
-  animation:discSpin 3.5s linear infinite;
-  animation-play-state:paused;
-}
-#musicToggle .disc::after{
-  content:'';
-  position:absolute;top:50%;left:50%;
-  width:5px;height:5px;border-radius:50%;
-  background:var(--gold-soft);
-  transform:translate(-50%,-50%);
-}
-#musicToggle.playing .disc{animation-play-state:running;}
-#musicToggle .bars{display:none;}
+#musicToggle svg{width:16px;height:16px;color:var(--gold-soft);}
+#musicToggle .mute-line{opacity:1;transition:opacity .25s ease;}
+#musicToggle.playing .mute-line{opacity:0;}
+#musicToggle.playing{border-color:rgba(198,161,91,0.85);}
 
 /* ============================================================
    RESPONSIVE - larger screens
@@ -866,7 +882,12 @@ a{color:inherit;text-decoration:none;}
   <!-- Background music -->
   <audio id="bgMusic" src="assets/song.mp3" loop preload="none"></audio>
   <button id="musicToggle" aria-label="Toggle music">
-    <span class="disc"></span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 18V5l12-2v13"></path>
+      <circle cx="6" cy="18" r="3"></circle>
+      <circle cx="18" cy="16" r="3"></circle>
+      <line class="mute-line" x1="2.5" y1="2.5" x2="21.5" y2="21.5"></line>
+    </svg>
   </button>
 
   <!-- ============================================================
@@ -919,7 +940,7 @@ a{color:inherit;text-decoration:none;}
   ============================================================ -->
   <section class="page imgpage" id="story">
     <div class="page-frame"></div>
-    <img class="bg-media" src="assets/story-bg.jpg" alt="Tuscan terrace at sunset overlooking the hilltop village">
+    <img class="bg-media" src="assets/couple-bw.jpg" alt="Emmanuel and Harsha, black and white portrait">
     <div class="bg-scrim"></div>
     <div class="content">
       <div class="story-head reveal" style="--i:0">
@@ -938,9 +959,9 @@ a{color:inherit;text-decoration:none;}
   <!-- ============================================================
        04 — THE COUPLE
   ============================================================ -->
-  <section class="page imgpage" id="couple">
+  <section class="page imgpage theme-tuscan" id="couple">
     <div class="page-frame"></div>
-    <img class="bg-media" src="assets/couple-footer-bg.jpg" alt="Misty Tuscan terrace overlooking the hilltop village at sunrise">
+    <img class="bg-media" src="assets/bg-tuscan.jpg" alt="Tuscan terrace overlooking the hilltop village at sunset">
     <div class="bg-scrim"></div>
     <div class="content">
       <div class="couple-head reveal" style="--i:0">
@@ -971,9 +992,9 @@ a{color:inherit;text-decoration:none;}
   <!-- ============================================================
        05 — SAVE THE DATE
   ============================================================ -->
-  <section class="page imgpage" id="savedate">
+  <section class="page imgpage theme-tuscan" id="savedate">
     <div class="page-frame"></div>
-    <img class="bg-media" src="assets/venue-bg.jpg" alt="Sunset terrace with dinner table set for the celebration">
+    <img class="bg-media" src="assets/bg-tuscan.jpg" alt="Tuscan terrace with dinner table set for the celebration">
     <div class="bg-scrim"></div>
     <div class="content">
       <div class="reveal" style="--i:0">
@@ -988,8 +1009,10 @@ a{color:inherit;text-decoration:none;}
   <!-- ============================================================
        06 — WEDDING DETAILS
   ============================================================ -->
-  <section class="page" id="details">
-    <div class="page-frame" style="border-color:rgba(143,110,52,0.35);"></div>
+  <section class="page imgpage theme-tuscan" id="details">
+    <div class="page-frame"></div>
+    <img class="bg-media" src="assets/bg-tuscan.jpg" alt="Tuscan terrace at golden hour">
+    <div class="bg-scrim"></div>
     <div class="content">
       <div class="details-head reveal" style="--i:0">
         <div class="eyebrow">Chapter Three</div>
@@ -1015,9 +1038,9 @@ a{color:inherit;text-decoration:none;}
   <!-- ============================================================
        07 — VENUES
   ============================================================ -->
-  <section class="page imgpage" id="venues">
+  <section class="page imgpage theme-tuscan" id="venues">
     <div class="page-frame"></div>
-    <img class="bg-media" src="assets/venue-bg.jpg" alt="Terrace overlooking the vineyards at sunset">
+    <img class="bg-media" src="assets/bg-tuscan.jpg" alt="Tuscan terrace overlooking the vineyards at sunset">
     <div class="bg-scrim"></div>
     <div class="content">
       <div class="venues-head reveal" style="--i:0">
@@ -1074,9 +1097,9 @@ a{color:inherit;text-decoration:none;}
   <!-- ============================================================
        09 — COUNTDOWN
   ============================================================ -->
-  <section class="page imgpage" id="countdown">
+  <section class="page imgpage theme-tuscan" id="countdown">
     <div class="page-frame"></div>
-    <img class="bg-media" src="assets/story-bg.jpg" alt="Sunset over the hilltop village">
+    <img class="bg-media" src="assets/bg-tuscan.jpg" alt="Sunset over the Tuscan hilltop village">
     <div class="bg-scrim"></div>
     <div class="content">
       <div class="reveal" style="--i:0">
@@ -1095,8 +1118,8 @@ a{color:inherit;text-decoration:none;}
   <!-- ============================================================
        11 — THANK YOU / FOOTER
   ============================================================ -->
-  <section class="page imgpage" id="thankyou">
-    <img class="bg-media" src="assets/couple-footer-bg.jpg" alt="Quiet misty terrace at dusk">
+  <section class="page imgpage theme-tuscan" id="thankyou">
+    <img class="bg-media" src="assets/bg-tuscan.jpg" alt="Quiet Tuscan terrace at dusk">
     <div class="bg-scrim"></div>
     <div class="content">
       <div class="ty-title reveal" style="--i:0">Thank You</div>
