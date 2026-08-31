@@ -94,6 +94,11 @@ a{color:inherit;text-decoration:none;}
   flex-direction:column;
 }
 
+/* Hide all pages except open and hero until invitation is opened */
+body[style*="overflow: hidden"] .page:not(#open):not(#hero){
+  display:none;
+}
+
 /* thin gold hairline frame inset within each page, invitation-card feel */
 .page-frame{
   position:absolute;
@@ -289,9 +294,11 @@ a{color:inherit;text-decoration:none;}
    02 HERO
    ============================================================ */
 #hero{
-  height:100svh;min-height:100svh;
+  height:100svh;
+  min-height:100svh;
   justify-content:flex-start;
   align-items:center;
+  position:relative;
 }
 #hero .bg-media{
   position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
