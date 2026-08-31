@@ -188,10 +188,16 @@ body[style*="overflow: hidden"] .page:not(#open):not(#hero){
 #open{
   height:100svh;
   min-height:100svh;
+  max-height:100svh;
   justify-content:flex-end;
   align-items:center;
   text-align:center;
   background:#000;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
 }
 #open .bg-media{
   position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
@@ -296,6 +302,7 @@ body[style*="overflow: hidden"] .page:not(#open):not(#hero){
 #hero{
   height:100svh;
   min-height:100svh;
+  max-height:100svh;
   justify-content:flex-start;
   align-items:center;
   position:relative;
